@@ -18,7 +18,7 @@ function posicaoRandomica(){
 	if(document.getElementById('mosquito')){
 		document.getElementById('mosquito').remove()//remove o mosquito caso exista e caso tenha sido removido perde uma vida
 		if (vidas > 3) {
-			alert('Game Over')	
+			window.location.href = "fim_de_jogo.html"//redireciona pagina game over
 		}else {
 			document.getElementById('v'+ vidas).src = "imagens/coracao_vazio.png" // quantidade de corações de forma dinamica
 			vidas++			
