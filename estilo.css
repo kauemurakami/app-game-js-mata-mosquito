@@ -5,7 +5,14 @@
 .mosquito3{
 	width: 70px;
 	height: 70px;
-}.mosquito2{
+}
+.mosquito2{
 	width: 90px;
 	height: 90px;
+}
+.ladoA{
+	transform: scaleX(1); /* esse lado é nosso lado comum, não precisaria ser declarado */
+}
+.ladoB{
+	transform : scaleX(-1); /*lado b*/
 }
