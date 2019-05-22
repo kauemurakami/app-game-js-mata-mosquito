@@ -2,7 +2,7 @@ var altura=0
 var largura = 0
 var vidas = 1
 var tempo = 15
-var criaMosquitoTempo = 1500
+var criaMosquitoTempo = 2000
 var nivel = window.location.search // recebe o parametro passado depois do ? inclusive o proprio ?
 //retorna apenas a query string da url, ou seja tudo que esta a direita do
 // ponto de interrogação
@@ -11,9 +11,9 @@ var nivel = window.location.search // recebe o parametro passado depois do ? inc
 nivel = nivel.replace('?', '')
 
 if (nivel === 'normal') {
+	criaMosquitoTempo = 2000
+}else if(nivel === 'dificil') {
 	criaMosquitoTempo = 1500
-}else if(dificil === 'dificil') {
-	criaMosquitoTempo = 1000
 }else if(nivel === 'chucknorris'){
 	criaMosquitoTempo = 750
 }
@@ -29,7 +29,7 @@ function ajustaTamanhoPalcoJogo(){
 ajustaTamanhoPalcoJogo()
 
 var cronometro = setInterval( function(){//innerHTML referencia o que há entre a TAG escolhida<>innerHTML</>
-	tempo--
+	tempo -= 1
 	if (tempo < 0) {
 		clearInterval(cronometro)
 		clearInterval(criaMosquito)
