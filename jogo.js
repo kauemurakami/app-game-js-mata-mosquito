@@ -1,6 +1,22 @@
-var altura, largura = 0
+var altura=0
+var largura = 0
 var vidas = 1
-var tempo = 10
+var tempo = 15
+var criaMosquitoTempo = 1500
+var nivel = window.location.search // recebe o parametro passado depois do ? inclusive o proprio ?
+//retorna apenas a query string da url, ou seja tudo que esta a direita do
+// ponto de interrogação
+
+//para retirar o ? 
+nivel = nivel.replace('?', '')
+
+if (nivel === 'normal') {
+	criaMosquitoTempo = 1500
+}else if(dificil === 'dificil') {
+	criaMosquitoTempo = 1000
+}else if(nivel === 'chucknorris'){
+	criaMosquitoTempo = 750
+}
 
 function ajustaTamanhoPalcoJogo(){
 	altura = window.innerHeight
